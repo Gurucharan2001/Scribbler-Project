@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scribbler Project</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/scripts/jquery-3.4.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link href="https://fonts.googleapis.com/css?family=Dokdo|Fredoka+One|Playfair+Display+Stoke&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="header">
+        <input class="topButtons" type="button" value="Sign Up" data-toggle="modal" data-target="#signup-modal" id="signup-btn" />
+        <input class="topButtons" type="button" value="Sign In" data-toggle="modal" data-target="#signin-modal" id="signin-btn" /> 
+        <a id="pageTitle" class="logo-title" href="index.html">ScriBBler</a>
+        <p class="middleText">Explore,Imagine,Create</p>
+    </div>
+
+    <div class="postButtons">
+      <a id="all-post" class="btn btn-warning text-light" href="/html/bloglist.html" >All Post</a>
+      <a id="create-post" data-toggle="modal" data-target="#create-modal" class="btn btn-warning text-light">Create Post</a>
+    </div>
+
+
+<!--Modal for sign in-->
+
+<div class="modal animated fadeIn mt-5" id="signin-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h2 class="modal-title" id="exampleModalLabel" class="header-font">Welcome Back</h2>
+        </div>
+        <div class="modal-body">
+            <form>
+            <label for="fullname">Username</label><br />
+            <input type="text" id="username" placeholder="Enter Username" class="form-control " required /><br />
+
+            <label for="fullname">Password</label><br />
+            <input type="text" id="password" placeholder="Enter Password" class="form-control " required /><br />
+            
+            <button class="btn btn-success text-light" type="submit">Sign In</button>
+            </form>
+            <br />
+            <p class="text-center text-bold">Not a member?<a href="#signup-modal">Sign Up</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--Model for sign in-->
+
+<!--modal for sign up-->
+
+<div class="modal animated fadeIn mt-5" id="signup-modal" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <h2 class="modal-title" id="exampleModalLabel" class="header-font">Get Started</h2>
+          
+          
+        </div>
+        <div class="modal-body">
+            <form>
+                <label for="fullname">Fullname</label><br />
+                <input type="text" id="fullname" placeholder="Enter Full Name" class="form-control " required /><br />
+
+                <label for="fullname">Username</label><br />
+                <input type="text" id="username" placeholder="Enter Username" class="form-control " required /><br />
+
+                <label for="fullname">Password</label><br />
+                <input type="text" id="password" placeholder="Enter Password" class="form-control " required /><br />
+
+                <label for="fullname">Confirm Password</label><br />
+                <input type="text" id="confirm-pass" placeholder="Confirm Password" class="form-control" required /><br /><br />
+
+                <button class="btn btn-success text-light" type="submit">Sign Up</button>
+            </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- modal for sign up-->
+
+<!--modal for create post-->
+<div class="modal animated fadeIn mt-5" id="create-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h2 class="modal-title mb-5 text-center" id="exampleModalLabel" class="header-font">Pen Your Post</h2>
+          <form id="create-form">
+            <label for="title">Title:</label><br />
+            <input type="text" name="title" id="title" class="form-control mb-4" required />
+
+            <label for="content">Content:</label><br />
+            <textarea id="content" rows="10" cols="50" class="form-control mb-5" ></textarea>
+            
+
+            <button class="btn btn-success" type="submit" id="create-btn">Create</button>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal for create post-->
+
+
+<script src="/scripts/index.js"></script>
+</body>
+</html>
