@@ -50,23 +50,45 @@ h1{
 /* End header coding */
 
 /*posts div*/
-#post-box{
+
+#first-post-box{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+}
+
+#second-post-box{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+}
+
+#third-post-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.post-box{
     display: flex;
     flex-direction: row;
     width:600px;
-    height:200px;
+    height:190px;
     box-shadow: 2px 3px #888888;
-    margin-top: 50px;
-    margin-left: 30px;
+    margin-top: 20px;
+    margin-left:70px;
     border-radius: 10px;
+    float: left;
 }
 
-#name-box{
+.name-box{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100px;
-    height: 200px;
+    height: 190px;
     border-left: none;
     border-right: none;
     border-bottom: none;
@@ -79,10 +101,10 @@ h1{
 
 }
 
-#text-box{
+.text-box{
     padding: 2px;
     width: 500px;
-    height: 200px;
+    height: 190px;
     border-left: none;
     border-right: none;
     border-bottom: none;
@@ -95,26 +117,76 @@ h1{
 
 }
 
-#name-box h4{
+.name-box h4{
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#text-box p{
+.text-box p{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 }
-#text-box h3{
+
+.text-box h3{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     font-weight: bold;
 }
 
-#trash-icon{
-    font-size: 25px;
+.trash-icon{
+    font-size: 25px !important;
     float: right;
 }
 
-#trash-icon:hover{
+.trash-icon:hover{
     cursor: pointer;
 }
+
+.post-txt2{
+    display: none;
+}
+
+.extras{
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+}
+
+/*code for modal*/
+#confirm-delete-post{
+    margin-top: 300px;
+
+}
+
+.yes{
+    width: 100px !important;
+    height:35px !important;
+}
+
+.no{
+    width: 100px !important;
+    height:35px !important;
+}
+
+/*making responsive*/
+@media screen and (max-width: 480px) {
+    .post-box{
+        width: 400px;
+        height:200px;
+    }
+    .text-box{
+        width: 300px;
+        height: 200px;
+        text-align: justify;
+    }
+    .name-box{
+        width: 100px;
+        height: 200px;
+    }
+    .post-txt1{
+        display: none;
+    }
+    .post-txt2{
+        display: block;
+    }
+  }
