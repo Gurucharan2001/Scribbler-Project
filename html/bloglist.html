@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../styles/bloglist.css" />
     <link href="https://fonts.googleapis.com/css?family=Dokdo|Fredoka+One|Playfair+Display+Stoke&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/animate.css" />
 </head>
 <body>
     <div class="header">
@@ -21,16 +22,18 @@
     </div>
 <!--Start post 1-->
 <div id="first-post-box">
-    <div class="post-box">
+    <div class="post-box" id="post1-box">
         <div class="name-box"><h4>Jimi</h4></div>
         <div class="text-box">
-            <i class="fa fa-trash trash-icon" aria-hidden="true" data-target="#confirm-delete-post" data-toggle="modal"></i>
+            <i class="fa fa-trash trash-icon" aria-hidden="true" data-target="#confirm-delete-post" data-toggle="modal" id="delete-post1"></i>
             <h3 class="post-txt1"> Hello There ! This is post 1.</h3>   
             <h3 class="post-txt2"> Hello There ! </h3>           
             <p>
                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
             </p>
-            <i class="extras">...</i>
+            <a style="text-decoration: none;color: black;" href="post.html">
+                <h4 class="extras">...</h4>
+            </a>
         </div>
     </div>
 <!-- end Post 1-->
@@ -44,7 +47,9 @@
         <p>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
         </p>
-        <i class="extras">...</i>
+        <a style="text-decoration: none;color: black;" href="post.html">
+            <h4 class="extras">...</h4>
+        </a>
     </div>
 </div>
 <!--End post 2-->
@@ -61,7 +66,9 @@
         <p>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
         </p>
-        <i class="extras">...</i>
+        <a style="text-decoration: none;color: black;" href="post.html">
+            <h4 class="extras">...</h4>
+        </a>
     </div>
 </div>
 <!--End post 3-->
@@ -75,7 +82,10 @@
         <p>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
         </p>
-        <i class="extras">...</i>
+        <a style="text-decoration: none;color: black;" href="post.html">
+            <h4 class="extras">...</h4>
+        </a>
+        
     </div>
 </div>
 <!--End post 4-->
@@ -92,7 +102,9 @@
         <p>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
         </p>
-        <i class="extras">...</i>
+        <a style="text-decoration: none;color: black;" href="post.html">
+            <h4 class="extras">...</h4>
+        </a>
     </div>
 </div>
 <!--End post 5-->
@@ -100,17 +112,88 @@
 
 <!--code for confirmation delete-->
 
-<div class="modal animated fadeIn" id="confirm-delete-post" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal animated fadeIn slower" id="confirm-delete-post" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-body text-center">
             <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Are you sure you want to delete this post?</h4>
-            <a class="btn btn-danger text-light yes"  href="bloglist.html">Yes</a>
-            <a class="btn btn-success text-light no" href="bloglist.html">No</a>
+            <a class="btn btn-danger text-light yes"  href="bloglist.html" id="yes-btn">Yes</a>
+            <a class="btn btn-success text-light no" href="bloglist.html" id="no-btn">No</a>
         </div>
       </div>
     </div>
   </div>
+
+  <!--end confirmation delete modal-->
+
+  <!--Modal for sign in-->
+
+<div class="modal animated fadeIn slower mt-5" id="signin-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h2 class="modal-title" id="exampleModalLabel" class="header-font">Welcome Back</h2>
+        </div>
+        <div class="modal-body">
+            <form>
+            <label for="fullname">Username</label><br />
+            <input type="text" id="username" placeholder="Enter Username" class="form-control " required /><br />
+
+            <label for="fullname">Password</label><br />
+            <input type="text" id="password" placeholder="Enter Password" class="form-control " required /><br />
+            
+            <button class="btn btn-success text-light" type="submit">Sign In</button>
+            </form>
+            <br />
+            <p class="text-center text-bold">Not a member?<a href="#signup-modal">Sign Up</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--Model for sign in-->
+
+<!--modal for sign up-->
+
+<div class="modal animated fadeIn slower mt-5" id="signup-modal" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <h2 class="modal-title" id="exampleModalLabel" class="header-font">Get Started</h2>
+          
+          
+        </div>
+        <div class="modal-body">
+            <form>
+                <label for="fullname">Fullname</label><br />
+                <input type="text" id="fullname" placeholder="Enter Full Name" class="form-control " required /><br />
+
+                <label for="fullname">Username</label><br />
+                <input type="text" id="username" placeholder="Enter Username" class="form-control " required /><br />
+
+                <label for="fullname">Password</label><br />
+                <input type="text" id="password" placeholder="Enter Password" class="form-control " required /><br />
+
+                <label for="fullname">Confirm Password</label><br />
+                <input type="text" id="confirm-pass" placeholder="Confirm Password" class="form-control" required /><br /><br />
+
+                <button class="btn btn-success text-light" type="submit">Sign Up</button>
+            </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- modal for sign up-->
+
     
 <script src="../scripts/bloglist.js"></script>
 </body>

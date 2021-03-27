@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+}
+
+
+#pageTitle{
+    text-decoration: none;
+}
+
+
+button:hover {
+ opacity:1;
+}
+
+input.topButtons {
+ width: 90px;
+ padding: 10px;
+ cursor: pointer;
+ font-weight: 500;
+ font-size: 90%;
+ background: #0000ff;
+ color: #fff;
+ float: right;                  
+ 
+ margin: 10px 10px 0px 0px;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo-title {
+font-family: 'Satisfy', cursive;
+font-size: 50px;
+color: #112fb4;
+margin: auto;
+text-decoration: none;
+margin: 10px 10px 0px 10px;    
+}
+h1{
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+}
+.middleText{
+    font-family: 'Marck Script', cursive;
+    margin-top: 0;
+    margin: 0 0 0px 10px;
+    color: black;
+}
+/* End header coding */
+
+/*start post text coding*/
+#post-text1{
+    float: left;
+    clear: left;
+}
+
+.edit-btn{
+    float: right;
+    background-color: deeppink;
+    color: #fff !important;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px #888888;
+    border-color: deeppink !important;
+}
+/* .edit-btn:hover{
+    color:white;
+} */
+
+
+
+.like-btn{
+    float: left;
+    background-color: deeppink;
+    color: white;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px #888888;
+    margin-bottom: 4px !important;
+}
+.like-btn:hover{
+    color:white;
+}
+
+.comment-btn{
+    float: left;
+    background-color: deeppink;
+    color: white;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px #888888;
+
+}
+.comment-btn:hover{
+    color:white;
+}
+
+
+/*end post text coding*/
+
+/*start code for comment*/
+#comments-on-post{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.jumbotron{
+    width:90%;
+    margin-left: 5%;
+    margin-top: 30px;
+    display: none;
+    padding: 10px !important;
+}
+
+#all-comments{
+    display: none;
+}

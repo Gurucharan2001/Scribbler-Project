@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloglist</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../scripts/jquery-3.4.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../styles/post.css" />
+    <link rel="stylesheet" href="../styles/animate.css" />
+    <link href="https://fonts.googleapis.com/css?family=Dokdo|Fredoka+One|Playfair+Display+Stoke&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div class="header">
+        <input class="topButtons" type="button" value="Sign Up" data-toggle="modal" data-target="#signup-modal" id="signup-btn" />
+        <input class="topButtons" type="button" value="Sign In" data-toggle="modal" data-target="#signin-modal" id="signin-btn" /> 
+        <a id="pageTitle" class="logo-title" href="../index.html">ScriBBler</a>
+        <p class="middleText">Explore,Imagine,Create</p>
+    </div>
+  <!--code for the posts-->
+    <div class="container-fluid">
+      <h3 class="text-center mb-3" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">The legancy of Jimi Hendrix</h3>
+      <h3 style="font-family: Edwardian Script ITC;font-weight: bolder;font-size: 30px;float: left;">Jimi</h3>
+      <button class="btn text-light edit-btn" id="edit-btn">Edit <i class='fa fa-edit' id="edit-icon"></i></button>
+      <div class="container-fluid text-justify" id="post-text1">
+        <!-- <textarea readonly id="blog-text" rows="13" cols="225" class="d-none"></textarea> -->
+        <p style="
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;letter-spacing: 1px;" id="blog-text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour).Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+        </p>
+      </div>
+    </div>
+    <div class="container-fluid like-comment-box">
+      <button class="btn text-light like-btn"> <i class='fa fa-thumbs-up'></i> Like</button>
+      <p style="letter-spacing: 2px;float: left;clear: left;">Be the first one to like this</p>
+      <form id="comment-form">
+        <textarea rows="5" cols="100" placeholder="Leave a comment...." style="float: left;clear: left;margin-bottom: 7px;" id="txt-area" required></textarea>
+        <button class="btn text-light comment-btn" style="float: left;clear: left;" type="submit">Comment</button>
+      </form>
+    </div>
+
+    <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight: bolder;margin-left: 10px;" id="all-comments">All Comments</h4>
+    <div class="jumbotron jumbotron-fluid" >
+      <div class="container-fluid" id="comments-on-post">
+      </div>
+    </div>
+
+  
+  <!--code for the posts-->
+
+
+
+<!--Modal for sign in-->
+<div class="modal animated fadeIn slower mt-5" id="signin-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h2 class="modal-title" id="exampleModalLabel" class="header-font">Welcome Back</h2>
+        </div>
+        <div class="modal-body">
+            <form>
+            <label for="fullname">Username</label><br />
+            <input type="text" id="username" placeholder="Enter Username" class="form-control " required /><br />
+
+            <label for="fullname">Password</label><br />
+            <input type="text" id="password" placeholder="Enter Password" class="form-control " required /><br />
+            
+            <button class="btn btn-success text-light" type="submit">Sign In</button>
+            </form>
+            <br />
+            <p class="text-center text-bold">Not a member?<a href="#signup-modal">Sign Up</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--Model for sign in-->
+
+<!--modal for sign up-->
+
+<div class="modal animated fadeIn slower mt-5" id="signup-modal" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <h2 class="modal-title" id="exampleModalLabel" class="header-font">Get Started</h2>
+          
+          
+        </div>
+        <div class="modal-body">
+            <form>
+                <label for="fullname">Fullname</label><br />
+                <input type="text" id="fullname" placeholder="Enter Full Name" class="form-control " required /><br />
+
+                <label for="fullname">Username</label><br />
+                <input type="text" id="username" placeholder="Enter Username" class="form-control " required /><br />
+
+                <label for="fullname">Password</label><br />
+                <input type="text" id="password" placeholder="Enter Password" class="form-control " required /><br />
+
+                <label for="fullname">Confirm Password</label><br />
+                <input type="text" id="confirm-pass" placeholder="Confirm Password" class="form-control" required /><br /><br />
+
+                <button class="btn btn-success text-light" type="submit">Sign Up</button>
+            </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- modal for sign up-->
+
+    <script src="../scripts/post.js"></script>
+</body>
+</html>
