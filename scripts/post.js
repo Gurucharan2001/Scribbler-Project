@@ -1,3 +1,4 @@
+var count = 0
 //Edit button 
 $(document).ready(function(){
     $(".edit-btn").click(function(){
@@ -44,7 +45,10 @@ $(document).ready(function(){
 
     //like button
     $(".like-btn").click(function(){
+        count++
         $(".like-btn").html("<i class='fa fa-thumbs-up'></i> Liked!")
+        $("#like-count").css("display","block")
+        $("#like-count").html(count+" person likes this!")
     })
 
 
