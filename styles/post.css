@@ -60,11 +60,19 @@ h1{
     box-shadow: 2px 2px 2px #888888;
     border-color: deeppink !important;
 }
-/* .edit-btn:hover{
+.save-btn{
+    float: right;
+    background-color: deeppink;
     color:white;
-} */
+    font-weight: bold;
+    box-shadow: 2px 2px 2px #888888;
+    border-color: deeppink !important;
+    display: none;
+}
 
-
+.save-btn:hover{
+    color: white;
+}
 
 .like-btn{
     float: left;
